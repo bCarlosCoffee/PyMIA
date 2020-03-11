@@ -179,12 +179,12 @@ extractImage(video="meuVideo.mp4")
  
  ```python
  Errado
- extractImage(formato=".2")
+ extractImage(quant_de_images=".2")
  ```
 
 ```python
 Certo
-extractImage(formato="60")
+extractImage(quant_de_images="60")
 ```
 Padrão: **1**
 
