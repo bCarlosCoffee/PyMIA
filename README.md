@@ -7,13 +7,78 @@
 ## Version: **0.1.0**
 
 > Voce precisa ter o **[FFmpeg](https://www.ffmpeg.org/download.html)** instalado em seu computador.
+&nbsp;
+
+### Como usar:
+   - ffmpeg instalado. ( __o programa foi testado com a versao: ffmpeg version 3.4.6-0ubuntu0.18.04.1 Copyright (c) 2000-2019 the FFmpeg developers__ )
+   
+   1. Exemplo de uso no **linux**
+   ```bash
+   git clone https://github.com/bCarlosCoffee/PyMIA.git
+   ```
+   - arquivo.py
+   ```python
+   
+   from PyMIA.convert import convert
+   
+   # Função para converter videos para outros formatos
+   convert('teste.mp4', 'mkv', 'formatado')
+ 
+   ```
 
 ***
+
+&nbsp;
+&nbsp;
+### Funções:
+   ```python
+      	from PyMIA.convert import convert
+   ```
+   > Converte videos para outros formatos.
+   &nbsp;
+   
+   ```python
+   	from PyMIA.extract_audio import extractAudio
+   ```
+   > Extrai audio de videos.
+   &nbsp;
+   
+   ```python
+   	from PyMIA.extract_image import extractImage
+   ```
+   > Extrai cenas de um video.
+   &nbsp;
+   
+   ```python 
+   	from PyMIA.movie_images import movieImages
+   ```
+   > Cria um filme de imagens.
+   &nbsp;
+   
+   ```python	
+   	from PyMIA.remove_audio import removeAudio
+   ```
+   > Remove audio de um video.
+   &nbsp;
+   
+   ```python
+   	from PyMIA.several_in_one import severalInOne
+   ```
+   > Junta varios videos em um só.
+   &nbsp;
+   
+   
+   ```python
+   	from PyMIA.split_in_two import splitInTwo
+   ```
+   > Separa um video em 2 separados.
+   &nbsp;
+  
 
 
 &nbsp;
 
-## **PyMIA.converter**
+## **PyMIA.convert**
 ```python
 from PyMIA.converter import convert
 ```
@@ -23,50 +88,50 @@ from PyMIA.converter import convert
 	- Nome do video finalizado(str)
 
 ***
-### converter(video="") 
+### convert(video="") 
 
 > Parametro **'video'** precisa receber ponto com formato!
 
 ```python
 Errado
-converter(video="meuVideo")
+convert(video="meuVideo")
 ```
 
 ```python
 Certo
-converter(video="meuVideo.mp4")
+convert(video="meuVideo.mp4")
 ```
 ***
-### converter(formato="")
+### convert(formato="")
 
  >Paramentro **'formato'** não pode receber pontos!
  
  ```python
  Errado
- converter(formato=".mp4")
+ convert(formato=".mp4")
  ```
 ```python
 Certo
-converter(formato="mp4")
+convert(formato="mp4")
 ```
 Se o parametro **'formato'** não receber argumento
 Por padrão ele irá ser o mesmo **formato do original**
 
 ***
 
-### converter(nome_do_video="")
+### convert(nome_do_video="")
 
 
 > Parametro **'nome_do_video'** não pode receber pontos!
 
 ```python
 Errado
-converter(nome_do_video="finalizado.mkv")
+convert(nome_do_video="finalizado.mkv")
 ```
 
 ```python
 Certo
-converter(nome_do_video="finalizado")
+convert(nome_do_video="finalizado")
 ```
 
 Se o parametro **'nome_do_video'** não receber argumento
@@ -490,7 +555,7 @@ splitInTwo(video="meuVideo.mp4")
 
 ***
 
-### severalInOne(tempo1="") 
+### splitInTwo(tempo1="") 
 
 > Parametro **'tempo1'** não pode receber pontos
 
@@ -508,7 +573,7 @@ Padrão do tempo1: **"00:01:00"**
 
 ***
 
-### severalInOne(nome_part_1="") 
+### splitInTwo(nome_part_1="") 
 
 > Parametro **'nome_part_1'** não pode receber pontos
 
@@ -526,7 +591,7 @@ Padrão do tempo1: **"part1"**
 
 ***
 
-### severalInOne(tempo2="") 
+### splitInTwo(tempo2="") 
 
 > Parametro **'tempo2'** não pode receber pontos
 
@@ -544,7 +609,7 @@ Padrão do tempo2: **é igual tempo1**
 
 ***
 
-### severalInOne(nome_part_2="") 
+### splitInTwo(nome_part_2="") 
 
 > Parametro **'nome_part_2'** não pode receber pontos
 
