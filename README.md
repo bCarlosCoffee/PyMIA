@@ -6,6 +6,8 @@
 
 ## Version: **0.1.0**
 
+> Voce precisa ter o **[FFmpeg](https://www.ffmpeg.org/download.html)** instalado em seu computador.
+
 ***
 
 
