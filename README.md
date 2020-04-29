@@ -483,6 +483,8 @@ from PyMIA.several_in_one import severalInOne
 	- pasta(str)  
 	- nome do video(str)
 	- formato(str)
+	
+obs: Essa função apaga a pasta com os vídeos depois de juntar os vídeos.
 
 ***
 
