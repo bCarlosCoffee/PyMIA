@@ -14,7 +14,7 @@ def severalInOne(pasta="", nome_do_video="video" , formato=""):
 
 	with open(pasta + '/lista.txt', 'w') as videos:
 		for video in os.listdir(pasta):
-			videos.write("file " + video + '\n')
+			videos.write(f"file '{video}'\n")
 
 
 	comando =  "ffmpeg -f concat -safe 0 -i {}/lista.txt -c copy {}.{}".format(pasta, nome_do_video,formato)
